@@ -191,7 +191,7 @@ fetches_done = 0
 bookmarks_in_last_fetch = 0
 warn 'Initial bookmarks fetch...'
 new_bookmarks = fetch_all_bookmarks(bookmarks_url, token_response)
-bookmarks_file = "bookmarks_#{user_id}.json"
+bookmarks_file = "bookmarks_#{user_id}_#{Time.now.strftime('%Y-%m-%d-%H.%M.%S')}.json"
 
 until false do
   begin
